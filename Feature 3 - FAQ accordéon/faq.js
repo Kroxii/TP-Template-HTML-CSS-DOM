@@ -29,7 +29,7 @@ const faqData = [
     }
 ];
 
-class FAQAccordion {
+class FAQAccordeon {
     constructor() {
         this.container = document.getElementById('faqContainer');
         this.searchInput = document.getElementById('searchInput');
@@ -270,7 +270,7 @@ class FAQAccordion {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const faq = new FAQAccordion();
+    const faq = new FAQAccordeon();
     window.faqInstance = faq;
 
     document.addEventListener('keydown', (e) => {
