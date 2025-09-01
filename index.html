@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <fieldset id="price-simulator">
+      <h3 id="product-name"></h3>
+      <label for="color-select"
+        >Color:</label>
+        <select id="color-select" name="color">
+          <template id="color-option-template">
+            <option></option>
+          </template>
+        </select>
+      <label for="version-select"
+        >Version:</label>
+        <select id="version-select" name="version">
+          <template id="version-option-template">
+            <option></option>
+          </template>
+        </select>
+      <fieldset id="options-field">
+        <legend>Options: </legend>
+        <template id="option-checkbox-template">
+          <label></label>
+          <input type="checkbox" name="option"></option>
+        </template>
+      </fieldset>
+      <p>Price: </p>
+      <div id="price"></div>
+    </fieldset>
     <div class="container">
         <header>
             <h1>Foire Aux Questions</h1>
