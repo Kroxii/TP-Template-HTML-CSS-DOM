@@ -1,0 +1,143 @@
+/* ----- Section des avis ----- */
+#reviews {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* En-tête */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#reviews-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.muted {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Barre d'outils */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.filter label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+.filter select {
+  padding: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.btn,
+#btn-fake {
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn:hover,
+#btn-fake:hover {
+  transform: translateY(-2px);
+}
+.btn {
+  background: linear-gradient(135deg, #fc8a55 0%, #ffae00 100%);
+}
+#btn-fake {
+  background: linear-gradient(135deg, #fc8a55 0%, #ffae00 100%);
+}
+
+/* Cartes */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Formulaire */
+#review-form {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e0;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-control label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+.form-control input:focus,
+.form-control select:focus,
+.form-control textarea:focus {
+  outline: none;
+  border-color: rgb(100, 100, 100, 0.8);
+}
+.form-control textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Liste + avis */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-rating {
+  color: #f59e0b;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.review-actions {
+  text-align: right;
+}
+.btn-delete {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background: #dc2626;
+}

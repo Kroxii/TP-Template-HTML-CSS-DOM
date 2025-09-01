@@ -14,6 +14,7 @@ function initReviews() {
   const form = document.getElementById("review-form");
   const template = document.getElementById("review-template");
   const filterSelect = document.getElementById("filter-rating");
+  const fakeBtn = document.getElementById("btn-fake");
 
   // Rendu des étoiles
   const renderStars = (rating) => "★".repeat(rating) + "☆".repeat(5 - rating);
@@ -73,6 +74,37 @@ function initReviews() {
 
   // Filtre
   filterSelect.addEventListener("change", applyFilter);
+
+  // Générateur d'avis
+  if (fakeBtn) {
+    const names = [
+      "Alex",
+      "Marie",
+      "Pierre",
+      "Sophie",
+      "Lucas",
+      "Emma",
+      "Hugo",
+      "Camille",
+    ];
+    const comments = [
+      "Très bon produit, je recommande !",
+      "Satisfait de mon achat.",
+      "Qualité correcte pour le prix.",
+      "Correspond parfaitement à mes attentes.",
+      "Design élégant et moderne.",
+      "Très pratique au quotidien.",
+    ];
+
+    fakeBtn.addEventListener("click", () => {
+      const author = names[Math.floor(Math.random() * names.length)];
+      const rating = Math.floor(Math.random() * 5) + 1;
+      const text = comments[Math.floor(Math.random() * comments.length)];
+
+      renderReview({ author, rating, text });
+      applyFilter();
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initReviews);
