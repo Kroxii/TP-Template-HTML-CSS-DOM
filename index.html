@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordéon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Foire Aux Questions</h1>
+            <p>Trouvez rapidement les réponses à vos questions</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Rechercher dans les questions..." class="search-input">
+        </div>
+
+        <div id="faqContainer" class="faq-container">
+        </div>
+
+        <div class="ask-question-section">
+            <h3>Vous ne trouvez pas votre réponse ?</h3>
+            <button id="askQuestionBtn" class="ask-btn">Poser une question</button>
+            
+            <div id="questionForm" class="question-form hidden">
+                <h4>Posez votre question</h4>
+                <input type="text" id="userQuestion" placeholder="Votre question..." class="form-input">
+                <textarea id="userDetails" placeholder="Détails supplémentaires (optionnel)..." class="form-textarea"></textarea>
+                <div class="form-buttons">
+                    <button id="submitQuestion" class="submit-btn">Envoyer</button>
+                    <button id="cancelQuestion" class="cancel-btn">Annuler</button>
+                </div>
+            </div>
+        </div>
+
+        <template id="faq-item-template">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text"></span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content"></div>
+                </div>
+            </div>
+        </template>
+
+        <template id="success-message-template">
+            <div class="success-message">
+                <strong>Merci pour votre question !</strong><br>
+                Nous vous répondrons dans les plus brefs délais à l'adresse email associée à votre compte.
+            </div>
+        </template>
+
+        <template id="no-results-template">
+            <div class="no-results">
+                <p>Aucun résultat trouvé pour votre recherche.</p>
+                <p>Essayez avec d'autres mots-clés ou <button id="askQuestionFromNoResults" class="ask-btn-inline">posez votre question</button>.</p>
+            </div>
+        </template>
+    </div>
+
+    <script src="Feature 3 - FAQ accordéon/faq.js"></script>
+</body>
+</html>
