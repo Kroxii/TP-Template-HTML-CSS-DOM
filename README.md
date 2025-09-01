@@ -1,5 +1,7 @@
 # TP Template - HTML, CSS & Manipulation du DOM
 
+Lien web : https://kroxii.github.io/TP-Template-HTML-CSS-DOM/
+
 ## 📋 Description
 
 Ce projet est un template d'exercice pratique (TP) démontrant l'utilisation d'HTML, CSS et la manipulation du DOM en JavaScript. Il s'agit d'une application web interactive comprenant plusieurs fonctionnalités modernes typiques d'un site e-commerce.
