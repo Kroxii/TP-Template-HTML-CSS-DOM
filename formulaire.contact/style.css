@@ -1,0 +1,159 @@
+
+#formContainer {
+  max-width: 500px;
+  width: 90%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+label {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+input, textarea {
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  transition: border 0.2s ease;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+
+
+
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+button[type="submit"] {
+  margin-top: 25px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+
+.modal-overlay,
+.confirmation-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.modal-content,
+.confirmation-content {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+
+.modal-content h2,
+.confirmation-content h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+
+.close-button,
+.close-confirmation {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.close-button:hover,
+.close-confirmation:hover {
+  color: #000;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
