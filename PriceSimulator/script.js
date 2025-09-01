@@ -14,7 +14,7 @@ const price = document.getElementById("price");
 
 const productData = {
   name: "Headphones",
-  colors: ["Noir", "Blanc", "Rouge"],
+  colors: ["Noir", "Blanc", "Rouge", "Rose"],
   versions: [
     {
       name: "Pas cher",
@@ -41,6 +41,10 @@ const productData = {
     {
       name: "Suppression de bruit",
       addsToPrice: 20,
+    },
+    {
+      name: "Oreilles de chat",
+      addsToPrice: 5000,
     },
   ],
   basePrice: 30,
