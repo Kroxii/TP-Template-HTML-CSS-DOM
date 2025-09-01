@@ -14,7 +14,7 @@ const price = document.getElementById("price");
 
 const productData = {
   name: "Headphones",
-  colors: ["black", "white", "red"],
+  colors: ["Noir", "Blanc", "Rouge"],
   versions: [
     {
       name: "Pas cher",
