@@ -17,11 +17,11 @@ const productData = {
   colors: ["black", "white", "red"],
   versions: [
     {
-      name: "cheap",
+      name: "Pas cher",
       addsToPrice: 0,
     },
     {
-      name: "medium",
+      name: "Cher",
       addsToPrice: 30,
     },
     {
@@ -31,15 +31,15 @@ const productData = {
   ],
   options: [
     {
-      name: "Extended warranty",
+      name: "Extension de garantie",
       addsToPrice: 25,
     },
     {
-      name: "Wireless",
+      name: "Sans Fil",
       addsToPrice: 10,
     },
     {
-      name: "Noise cancelling",
+      name: "Suppression de bruit",
       addsToPrice: 20,
     },
   ],
