@@ -33,6 +33,75 @@
       <p>Price: </p>
       <div id="price"></div>
     </fieldset>
+    <section id="reviews">
+      <div class="section-header">
+        <h2 id="reviews-title">Avis clients</h2>
+      </div>
+
+      <!-- Filtre -->
+      <div class="toolbar">
+        <div class="filter">
+          <label for="filter-rating">Filtrer par note</label>
+          <select id="filter-rating">
+            <option value="all" selected>Toutes les notes</option>
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+        </div>
+        <button id="btn-fake" type="button">+ Générer un avis</button>
+      </div>
+
+      <!-- Formulaire -->
+      <form id="review-form" class="card">
+        <div class="grid-2">
+          <div class="form-control">
+            <label for="review-author">Nom</label>
+            <input id="review-author" name="author" type="text" required />
+          </div>
+          <div class="form-control">
+            <label for="review-rating">Note</label>
+            <select id="review-rating" name="rating" required>
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="review-text">Votre avis</label>
+          <textarea id="review-text" name="text" rows="3" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Ajouter l'avis</button>
+        </div>
+      </form>
+
+      <!-- Liste des avis -->
+      <div class="list" id="review-list"></div>
+
+      <!-- Template d'un avis -->
+      <template id="review-template">
+        <article class="review card enter" data-id="" data-rating="">
+          <div class="review-header">
+            <span class="review-author"></span>
+            <span class="review-rating"></span>
+          </div>
+          <p class="review-text"></p>
+          <footer class="review-actions">
+            <button class="btn-danger btn-delete" type="button">
+              Supprimer
+            </button>
+          </footer>
+        </article>
+      </template>
+    </section>
     <div class="container">
         <header>
             <h1>Foire Aux Questions</h1>
