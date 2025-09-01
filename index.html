@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset id="price-simulator">
+      <h3 id="product-name"></h3>
+      <label for="color-select"
+        >Color:</label>
+        <select id="color-select" name="color">
+          <template id="color-option-template">
+            <option></option>
+          </template>
+        </select>
+      <label for="version-select"
+        >Version:</label>
+        <select id="version-select" name="version">
+          <template id="version-option-template">
+            <option></option>
+          </template>
+        </select>
+      <fieldset id="options-field">
+        <legend>Options: </legend>
+        <template id="option-checkbox-template">
+          <label></label>
+          <input type="checkbox" name="option"></option>
+        </template>
+      </fieldset>
+      <p>Price: </p>
+      <div id="price"></div>
+    </fieldset>
+  </body>
+</html>
+
+<script src="PriceSimulator/script.js"></script>
