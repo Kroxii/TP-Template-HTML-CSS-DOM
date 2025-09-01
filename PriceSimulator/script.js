@@ -44,7 +44,7 @@ const productData = {
     },
     {
       name: "Oreilles de chat",
-      addsToPrice: 5000,
+      addsToPrice: 200,
     },
   ],
   basePrice: 30,
