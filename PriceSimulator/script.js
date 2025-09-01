@@ -1,3 +1,4 @@
+const priceSimulatorField = document.getElementById("price-simulator");
 const productName = document.getElementById("product-name");
 const colorSelect = document.getElementById("color-select");
 const colorOptionTemplate = document.getElementById("color-option-template");
@@ -51,7 +52,9 @@ class PriceSimulator {
     this.colorCount = 0;
     this.versionCount = 0;
     this.optionCount = 0;
+    this.price = "€" + data.basePrice;
     this.render();
+    priceSimulatorField.addEventListener("change", this.updatePrice.bind(this));
   }
 
   setColorOptions(color) {
@@ -75,12 +78,12 @@ class PriceSimulator {
     if (!this.versionCount) {
       option.setAttribute("selected", "selected");
     }
-    option.setAttribute("value", version.name);
+    option.setAttribute("value", version.addsToPrice);
     this.versionCount++;
     versionSelect.appendChild(clone);
   }
 
-  setOptionCheckboxes(option){
+  setOptionCheckboxes(option) {
     const clone = optionCheckboxTemplate.content.cloneNode(true);
     const label = clone.querySelector("label");
     const checkbox = clone.querySelector("input");
@@ -89,6 +92,7 @@ class PriceSimulator {
     label.setAttribute("for", id);
     label.innerText = option.name + ": ";
     checkbox.setAttribute("id", id);
+    checkbox.setAttribute("value", option.addsToPrice);
     this.optionCount++;
     optionField.appendChild(clone);
   }
@@ -98,7 +102,21 @@ class PriceSimulator {
     this.data.colors.forEach(this.setColorOptions, this);
     this.data.versions.forEach(this.setVersionOptions, this);
     this.data.options.forEach(this.setOptionCheckboxes, this);
-    price.innerText = "€" + this.data.basePrice;
+    price.innerText = this.price;
+  }
+
+  updatePrice(e) {
+    let optionsPrice = 0;
+    optionField
+      .querySelectorAll('input[type="checkbox"]')
+      .forEach(
+        (checkbox) => (optionsPrice += checkbox.checked ? Number(checkbox.value) : 0)
+      );
+    const value = this.data.basePrice + Number(versionSelect.value) + optionsPrice;
+    this.price =
+      "€" + value;
+
+    price.innerText = this.price;
   }
 }
 
