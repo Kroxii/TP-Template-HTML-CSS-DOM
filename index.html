@@ -157,6 +157,43 @@
         </template>
     </div>
 
+    <div id="formContainer">
+        <h2 class="form-title">Formulaire de contact</h2>
+  <form id="contactForm" novalidate>
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom">
+      <div class="error" id="error-nom"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email">
+      <div class="error" id="error-email"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4"></textarea>
+      <div class="error" id="error-message"></div>
+    </div>
+
+    <button type="submit">Envoyer</button>
+    
+  </form>
+</div>
+
+<div id="confirmationModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Message envoyé !</h2>
+    <p>Merci pour votre message. Nous vous répondrons dès que possible.</p>
+  </div>
+</div>
+
     <script src="Feature 3 - FAQ accordéon/faq.js"></script>
+    <script src="PriceSimulator/script.js"></script>
+    <script src="formulaire.contact/contact.js"></script>
+    <script src="reviews/reviews.js"></script>
 </body>
 </html>
